@@ -36,6 +36,12 @@ export const translations = {
         balcony: "Balcony & Terrace"
       }
     },
+    seaView: {
+      title: "The Sea View",
+      subtitle: "Panoramic Adriatic Views",
+      description: "Experience breathtaking sea views from the comfort of your villa. Every property in our collection is positioned to maximize the stunning vistas of the Adriatic Sea, creating a perfect backdrop for your Mediterranean lifestyle.",
+      cta: "Schedule a Viewing"
+    },
     gallery: {
       title: "Gallery"
     },
@@ -81,6 +87,12 @@ export const translations = {
         parking: "Parkplätze",
         balcony: "Balkon & Terrasse"
       }
+    },
+    seaView: {
+      title: "Der Meerblick",
+      subtitle: "Panoramablick auf die Adria",
+      description: "Erleben Sie atemberaubenden Meerblick vom Komfort Ihrer Villa aus. Jede Immobilie in unserer Kollektion ist so positioniert, dass sie die herrliche Aussicht auf die Adria maximiert und eine perfekte Kulisse für Ihren mediterranen Lebensstil bietet.",
+      cta: "Besichtigung vereinbaren"
     },
     gallery: {
       title: "Galerie"

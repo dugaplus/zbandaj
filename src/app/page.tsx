@@ -192,6 +192,61 @@ export default function Home() {
         </div>
       </section>
 
+      {/* The Sea View Section */}
+      <section className="relative py-24">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/media/view.jpg"
+            alt="Sea View"
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/60" />
+        </div>
+        <div className="container relative z-10">
+          <div className="max-w-3xl mx-auto text-center text-white">
+            <motion.h2 
+              className="heading-2 heading-dark mb-3"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              {t.seaView.title}
+            </motion.h2>
+            <motion.p
+              className="text-xl font-light mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              {t.seaView.subtitle}
+            </motion.p>
+            <motion.p
+              className="mb-10 text-lg"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              {t.seaView.description}
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <Link href="/contact" className="btn btn-primary">
+                {t.seaView.cta}
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Gallery Section */}
       <section id="gallery" className="section">
         <div className="container">
