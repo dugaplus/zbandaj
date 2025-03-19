@@ -3,11 +3,18 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { GlobeAltIcon } from "@heroicons/react/24/outline";
+import { translations, type Language } from "@/utils/translations";
+import MobileMenu from "./MobileMenu";
 
-export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
+interface NavigationProps {
+  language: Language;
+  onLanguageChange: () => void;
+}
+
+export default function Navigation({ language, onLanguageChange }: NavigationProps) {
   const [scrolled, setScrolled] = useState(false);
+  const t = translations[language];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,91 +28,74 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/95 backdrop-blur-sm shadow-md" : "bg-transparent"
+        scrolled ? "bg-white/95 backdrop-blur-sm shadow-md py-2" : "bg-transparent py-4"
       }`}
     >
       <div className="container">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between">
           <Link 
             href="/" 
-            className={`text-2xl font-bold transition-colors duration-300 ${
+            className={`text-xl sm:text-2xl font-bold transition-colors duration-300 ${
               scrolled ? "text-estate-dark hover:text-primary" : "text-white hover:text-estate-light"
             }`}
           >
             Žbandaj Villas
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link 
-              href="/" 
-              className={`transition-colors duration-300 ${
-                scrolled ? "text-neutral-600 hover:text-primary" : "text-white hover:text-estate-light"
+          <div className="flex items-center">
+            {/* Language Toggle */}
+            <button
+              onClick={onLanguageChange}
+              className={`mr-4 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary/50 ${
+                scrolled ? "bg-estate-light/20" : "bg-white/20"
               }`}
+              aria-label="Toggle Language"
             >
-              Home
-            </Link>
-            <Link 
-              href="/#villas" 
-              className={`transition-colors duration-300 ${
-                scrolled ? "text-neutral-600 hover:text-primary" : "text-white hover:text-estate-light"
-              }`}
-            >
-              Villas
-            </Link>
-            <Link href="/contact" className="btn btn-primary">
-              Contact
-            </Link>
-          </div>
+              <GlobeAltIcon className={`w-5 h-5 ${
+                scrolled ? "text-primary" : "text-white"
+              }`} />
+            </button>
 
-          {/* Mobile Navigation Button */}
-          <button
-            className={`md:hidden transition-colors duration-300 ${
-              scrolled ? "text-estate-dark hover:text-primary" : "text-white hover:text-estate-light"
-            }`}
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? (
-              <XMarkIcon className="w-6 h-6" />
-            ) : (
-              <Bars3Icon className="w-6 h-6" />
-            )}
-          </button>
-        </div>
-
-        {/* Mobile Navigation Menu */}
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="md:hidden bg-white/95 backdrop-blur-sm shadow-lg rounded-lg mt-4 p-4"
-          >
-            <div className="flex flex-col space-y-4">
-              <Link
-                href="/"
-                className="nav-link"
-                onClick={() => setIsOpen(false)}
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-6">
+              <Link 
+                href="/" 
+                className={`transition-colors duration-300 ${
+                  scrolled ? "text-neutral-600 hover:text-primary" : "text-white hover:text-estate-light"
+                }`}
               >
                 Home
               </Link>
-              <Link
-                href="/#villas"
-                className="nav-link"
-                onClick={() => setIsOpen(false)}
+              <Link 
+                href="/#villas" 
+                className={`transition-colors duration-300 ${
+                  scrolled ? "text-neutral-600 hover:text-primary" : "text-white hover:text-estate-light"
+                }`}
               >
-                Villas
+                {t.villas.title}
               </Link>
-              <Link
-                href="/contact"
-                className="btn btn-primary w-full text-center"
-                onClick={() => setIsOpen(false)}
+              <Link 
+                href="/#gallery" 
+                className={`transition-colors duration-300 ${
+                  scrolled ? "text-neutral-600 hover:text-primary" : "text-white hover:text-estate-light"
+                }`}
               >
-                Contact
+                {t.gallery.title}
+              </Link>
+              <Link 
+                href="/contact" 
+                className="btn btn-primary"
+              >
+                {t.contact.cta}
               </Link>
             </div>
-          </motion.div>
-        )}
+
+            {/* Mobile Menu */}
+            <div className={scrolled ? "text-primary" : "text-white"}>
+              <MobileMenu language={language} />
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
   );

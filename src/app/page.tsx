@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { translations, type Language } from "@/utils/translations";
-import { GlobeAltIcon } from "@heroicons/react/24/outline";
+import Navigation from "@/components/Navigation";
 
 export default function Home() {
   const [language, setLanguage] = useState<Language>('en');
@@ -18,17 +18,11 @@ export default function Home() {
 
   return (
     <main>
-      {/* Language Toggle */}
-      <button
-        onClick={toggleLanguage}
-        className="fixed top-4 right-4 z-50 bg-white/90 backdrop-blur-sm p-2 rounded-full shadow-md hover:shadow-lg transition-all duration-200"
-        aria-label="Toggle Language"
-      >
-        <GlobeAltIcon className="w-6 h-6 text-primary" />
-      </button>
+      {/* Navigation */}
+      <Navigation language={language} onLanguageChange={toggleLanguage} />
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/media/zbandaj01.jpg"
@@ -208,7 +202,7 @@ export default function Home() {
       </section>
 
       {/* Gallery Section */}
-      <section className="section">
+      <section id="gallery" className="section">
         <div className="container">
           <h2 className="heading-2 heading-light text-center mb-16">{t.gallery.title}</h2>
           <div className="gallery-grid">
