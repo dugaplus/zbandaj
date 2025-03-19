@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import NavigationWrapper from "@/components/NavigationWrapper";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -18,8 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} font-sans antialiased`}>
-        <NavigationWrapper />
-        {children}
+        <LanguageProvider>
+          <NavigationWrapper />
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

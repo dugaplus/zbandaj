@@ -1,25 +1,16 @@
 'use client';
 
 import Link from "next/link";
-import { useState } from "react";
-import { translations, type Language } from "@/utils/translations";
-import Navigation from "@/components/Navigation";
+import { translations } from "@/utils/translations";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { EnvelopeIcon, PhoneIcon, MapPinIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
 
 export default function ContactPage() {
-  const [language, setLanguage] = useState<Language>('en');
+  const { language } = useLanguage();
   const t = translations[language];
-
-  // Function to toggle language
-  const toggleLanguage = () => {
-    setLanguage(prev => prev === 'en' ? 'de' : 'en');
-  };
 
   return (
     <main>
-      {/* Navigation */}
-      <Navigation language={language} onLanguageChange={toggleLanguage} />
-
       {/* Contact Section */}
       <section className="pt-32 pb-20">
         <div className="container">

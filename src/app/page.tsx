@@ -3,24 +3,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
-import { translations, type Language } from "@/utils/translations";
-import Navigation from "@/components/Navigation";
+import { translations } from "@/utils/translations";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Home() {
-  const [language, setLanguage] = useState<Language>('en');
+  const { language } = useLanguage();
   const t = translations[language];
-
-  // Function to toggle language
-  const toggleLanguage = () => {
-    setLanguage(prev => prev === 'en' ? 'de' : 'en');
-  };
 
   return (
     <main>
-      {/* Navigation */}
-      <Navigation language={language} onLanguageChange={toggleLanguage} />
-
       {/* Hero Section */}
       <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">

@@ -3,19 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { translations, type Language } from "@/utils/translations";
-import Navigation from "@/components/Navigation";
+import { translations } from "@/utils/translations";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { EnvelopeIcon, PhoneIcon, MapPinIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
 
 export default function VillaMediterraneaPage() {
-  const [language, setLanguage] = useState<Language>('en');
+  const { language } = useLanguage();
   const t = translations[language];
-
-  // Function to toggle language
-  const toggleLanguage = () => {
-    setLanguage(prev => prev === 'en' ? 'de' : 'en');
-  };
 
   const features = [
     { name: '4 Bedrooms', icon: '🛏️' },
@@ -34,9 +28,6 @@ export default function VillaMediterraneaPage() {
 
   return (
     <main>
-      {/* Navigation */}
-      <Navigation language={language} onLanguageChange={toggleLanguage} />
-
       {/* Hero Section */}
       <section className="relative pt-20 mb-12">
         <div className="container pt-12">
