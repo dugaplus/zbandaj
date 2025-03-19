@@ -57,7 +57,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Luxury Living in Croatia
+            KUĆA SA POGLEDOM NA MORE I BAZENOM
           </motion.h1>
           <motion.p 
             className="text-xl mb-8 max-w-2xl mx-auto"
@@ -65,7 +65,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Discover our exclusive collection of modern villas, where Mediterranean charm meets contemporary design.
+            Modern villa with an unforgettable sea view in Žbandaj kod Poreča. Perfect combination of privacy and proximity to all important amenities.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -101,10 +101,26 @@ export default function Home() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="heading-3 heading-light mb-4">Villa Adriatica</h3>
+                <h3 className="heading-3 heading-light mb-4">Modern Sea View Villa</h3>
                 <p className="text-neutral-600 mb-4">
-                  A stunning 4-bedroom villa with panoramic sea views, infinity pool, and modern amenities.
+                  A stunning new build villa with panoramic sea views, private pool, and modern amenities. Features spacious living areas with fireplace and seamless indoor-outdoor living.
                 </p>
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="flex flex-col space-y-2">
+                    <span className="font-semibold text-neutral-700">Property Details:</span>
+                    <span className="text-neutral-600">• 168 m² Living Area</span>
+                    <span className="text-neutral-600">• 350 m² Plot Size</span>
+                    <span className="text-neutral-600">• 4 Bedrooms</span>
+                    <span className="text-neutral-600">• Energy Class A</span>
+                  </div>
+                  <div className="flex flex-col space-y-2">
+                    <span className="font-semibold text-neutral-700">Features:</span>
+                    <span className="text-neutral-600">• Sea View</span>
+                    <span className="text-neutral-600">• Private Pool</span>
+                    <span className="text-neutral-600">• 4 Parking Spaces</span>
+                    <span className="text-neutral-600">• Balcony & Terrace</span>
+                  </div>
+                </div>
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div className="relative h-32">
                     <Image src="/media/PHOTO-2024-11-07-14-56-37 3.jpg" alt="Villa Interior" fill className="object-cover rounded-lg" />
@@ -114,7 +130,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-2xl font-bold text-accent">€1,200,000</span>
+                  <span className="text-2xl font-bold text-accent">€611,000</span>
                   <Link href="/villa-1" className="btn btn-secondary">
                     View Details
                   </Link>
@@ -141,8 +157,24 @@ export default function Home() {
               <div className="p-6">
                 <h3 className="heading-3 heading-light mb-4">Villa Mediterranea</h3>
                 <p className="text-neutral-600 mb-4">
-                  A luxurious 5-bedroom villa featuring a private beach access, spa, and smart home technology.
+                  A luxurious new build featuring a private pool, spacious living areas, and stunning sea views. Built in 2025 with modern design and premium finishes.
                 </p>
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="flex flex-col space-y-2">
+                    <span className="font-semibold text-neutral-700">Property Details:</span>
+                    <span className="text-neutral-600">• 168 m² Living Area</span>
+                    <span className="text-neutral-600">• 350 m² Plot Size</span>
+                    <span className="text-neutral-600">• 4 Bedrooms</span>
+                    <span className="text-neutral-600">• Energy Class A</span>
+                  </div>
+                  <div className="flex flex-col space-y-2">
+                    <span className="font-semibold text-neutral-700">Features:</span>
+                    <span className="text-neutral-600">• Sea View</span>
+                    <span className="text-neutral-600">• Private Pool</span>
+                    <span className="text-neutral-600">• 4 Parking Spaces</span>
+                    <span className="text-neutral-600">• Balcony & Terrace</span>
+                  </div>
+                </div>
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div className="relative h-32">
                     <Image src="/media/PHOTO-2024-11-07-14-56-39 2.jpg" alt="Villa Interior" fill className="object-cover rounded-lg" />
@@ -204,7 +236,7 @@ export default function Home() {
         <div className="container text-center">
           <h2 className="heading-2 heading-dark mb-6">Interested in Our Villas?</h2>
           <p className="text-white text-xl mb-8 max-w-2xl mx-auto">
-            Contact us to schedule a private viewing or learn more about our exclusive properties.
+            Contact us to schedule a private viewing or video call tour. Property exchange options available.
           </p>
           <Link href="/contact" className="btn btn-primary bg-white text-primary hover:bg-estate-light">
             Get in Touch
