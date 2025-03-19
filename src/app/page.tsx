@@ -31,8 +31,8 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/media/PHOTO-2024-11-07-14-56-48 4.jpg"
-            alt="Luxury Villa"
+            src="/media/zbandaj01.jpg"
+            alt="Luxury Villa Exterior"
             fill
             sizes="100vw"
             className="object-cover"
@@ -84,8 +84,8 @@ export default function Home() {
             >
               <div className="relative h-64">
                 <Image
-                  src="/media/PHOTO-2024-11-07-14-56-35.jpg"
-                  alt="Villa Adriatica"
+                  src="/media/zbandaj02.jpg"
+                  alt="Villa Adriatica Main View"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
@@ -113,7 +113,7 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div className="relative h-32">
                     <Image 
-                      src="/media/PHOTO-2024-11-07-14-56-37 3.jpg" 
+                      src="/media/zbandaj03.jpg" 
                       alt="Villa Interior" 
                       fill 
                       sizes="(max-width: 768px) 50vw, 25vw"
@@ -122,7 +122,7 @@ export default function Home() {
                   </div>
                   <div className="relative h-32">
                     <Image 
-                      src="/media/PHOTO-2024-11-07-14-56-37.jpg" 
+                      src="/media/zbandaj04.jpg" 
                       alt="Villa Exterior" 
                       fill 
                       sizes="(max-width: 768px) 50vw, 25vw"
@@ -149,8 +149,8 @@ export default function Home() {
             >
               <div className="relative h-64">
                 <Image
-                  src="/media/PHOTO-2024-11-07-14-56-39.jpg"
-                  alt="Villa Mediterranea"
+                  src="/media/zbandaj05.jpg"
+                  alt="Villa Mediterranea Main View"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
@@ -178,7 +178,7 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div className="relative h-32">
                     <Image 
-                      src="/media/PHOTO-2024-11-07-14-56-39 2.jpg" 
+                      src="/media/zbandaj06.jpg" 
                       alt="Villa Interior" 
                       fill 
                       sizes="(max-width: 768px) 50vw, 25vw"
@@ -187,7 +187,7 @@ export default function Home() {
                   </div>
                   <div className="relative h-32">
                     <Image 
-                      src="/media/PHOTO-2024-11-07-14-56-40.jpg" 
+                      src="/media/zbandaj07.jpg" 
                       alt="Villa Exterior" 
                       fill 
                       sizes="(max-width: 768px) 50vw, 25vw"
@@ -213,15 +213,15 @@ export default function Home() {
           <h2 className="heading-2 heading-light text-center mb-16">{t.gallery.title}</h2>
           <div className="gallery-grid">
             {[
-              "/media/PHOTO-2024-11-07-14-56-47.jpg",
+              "/media/zbandaj08.jpg",
               "/media/PHOTO-2024-11-07-14-56-48.jpg",
               "/media/PHOTO-2024-11-07-14-56-44 2.jpg",
               "/media/PHOTO-2024-11-07-14-56-48 2.jpg",
               "/media/PHOTO-2024-11-07-14-56-48 6.jpg",
               "/media/PHOTO-2024-11-07-14-56-38 3.jpg",
-              "/media/PHOTO-2024-11-07-14-56-48 7.jpg",
-              "/media/PHOTO-2024-11-07-14-56-16.jpg",
-              "/media/PHOTO-2024-11-07-14-56-48 8.jpg"
+              "/media/zbandaj01.jpg",
+              "/media/zbandaj04.jpg",
+              "/media/zbandaj06.jpg"
             ].map((src, index) => (
               <motion.div
                 key={index}
