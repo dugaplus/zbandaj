@@ -26,16 +26,31 @@ export default function Navigation() {
     >
       <div className="container">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="text-2xl font-bold text-estate-dark hover:text-primary transition-colors">
+          <Link 
+            href="/" 
+            className={`text-2xl font-bold transition-colors duration-300 ${
+              scrolled ? "text-estate-dark hover:text-primary" : "text-white hover:text-estate-light"
+            }`}
+          >
             Žbandaj Villas
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="nav-link">
+            <Link 
+              href="/" 
+              className={`transition-colors duration-300 ${
+                scrolled ? "text-neutral-600 hover:text-primary" : "text-white hover:text-estate-light"
+              }`}
+            >
               Home
             </Link>
-            <Link href="/#villas" className="nav-link">
+            <Link 
+              href="/#villas" 
+              className={`transition-colors duration-300 ${
+                scrolled ? "text-neutral-600 hover:text-primary" : "text-white hover:text-estate-light"
+              }`}
+            >
               Villas
             </Link>
             <Link href="/contact" className="btn btn-primary">
@@ -45,7 +60,9 @@ export default function Navigation() {
 
           {/* Mobile Navigation Button */}
           <button
-            className="md:hidden text-estate-dark hover:text-primary transition-colors"
+            className={`md:hidden transition-colors duration-300 ${
+              scrolled ? "text-estate-dark hover:text-primary" : "text-white hover:text-estate-light"
+            }`}
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? (

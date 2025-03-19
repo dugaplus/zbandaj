@@ -43,15 +43,24 @@
   }
   
   .heading-1 {
-    @apply text-4xl sm:text-5xl font-bold tracking-tight text-primary;
+    @apply text-4xl sm:text-5xl font-bold tracking-tight;
   }
   
   .heading-2 {
-    @apply text-3xl sm:text-4xl font-bold tracking-tight text-primary;
+    @apply text-3xl sm:text-4xl font-bold tracking-tight;
   }
   
   .heading-3 {
-    @apply text-2xl sm:text-3xl font-bold tracking-tight text-primary;
+    @apply text-2xl sm:text-3xl font-bold tracking-tight;
+  }
+
+  /* Use these classes for different background contexts */
+  .heading-light {
+    @apply text-primary;
+  }
+  
+  .heading-dark {
+    @apply text-white;
   }
 
   .card {
@@ -60,6 +69,19 @@
 
   .nav-link {
     @apply text-neutral-600 hover:text-primary transition-colors duration-200;
+  }
+
+  /* Gallery styles */
+  .gallery-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5;
+  }
+
+  .gallery-item {
+    @apply relative overflow-hidden rounded-lg shadow-md;
+  }
+
+  .gallery-image {
+    @apply object-cover w-full h-full transition-all duration-500 hover:scale-110;
   }
 }
 
