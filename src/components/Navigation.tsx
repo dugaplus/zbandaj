@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { GlobeAltIcon } from "@heroicons/react/24/outline";
 import { translations, type Language } from "@/utils/translations";
 import MobileMenu from "./MobileMenu";
 
@@ -43,19 +42,6 @@ export default function Navigation({ language, onLanguageChange }: NavigationPro
           </Link>
 
           <div className="flex items-center">
-            {/* Language Toggle */}
-            <button
-              onClick={onLanguageChange}
-              className={`mr-4 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary/50 ${
-                scrolled ? "bg-estate-light/20" : "bg-white/20"
-              }`}
-              aria-label="Toggle Language"
-            >
-              <GlobeAltIcon className={`w-5 h-5 ${
-                scrolled ? "text-primary" : "text-white"
-              }`} />
-            </button>
-
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
               <Link 
