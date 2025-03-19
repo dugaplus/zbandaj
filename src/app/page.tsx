@@ -86,7 +86,7 @@ export default function Home() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="heading-3 heading-light mb-4">{t.villas.villa1.title}</h3>
+                <h3 className="heading-3 heading-light mb-4">{language === 'en' ? 'Villa Istriana' : 'Villa Istriana'}</h3>
                 <p className="text-neutral-600 mb-4">{t.villas.villa1.description}</p>
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="flex flex-col space-y-2">
@@ -107,7 +107,7 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div className="relative h-32">
                     <Image 
-                      src="/media/zbandaj03.jpg" 
+                      src="/media/zbandaj07.jpg" 
                       alt="Villa Interior" 
                       fill 
                       sizes="(max-width: 768px) 50vw, 25vw"
@@ -126,7 +126,7 @@ export default function Home() {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-2xl font-bold text-accent">€611,000</span>
-                  <Link href="/villa-1" className="btn btn-secondary">
+                  <Link href="/villa-istriana" className="btn btn-secondary">
                     {t.villas.villa1.viewDetails}
                   </Link>
                 </div>
@@ -191,7 +191,7 @@ export default function Home() {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-2xl font-bold text-accent">€611,000</span>
-                  <Link href="/villa-2" className="btn btn-secondary">
+                  <Link href="/villa-mediterranea" className="btn btn-secondary">
                     {t.villas.villa2.viewDetails}
                   </Link>
                 </div>
@@ -245,6 +245,10 @@ export default function Home() {
           <p className="text-white text-xl mb-8 max-w-2xl mx-auto">
             {t.contact.description}
           </p>
+          <div className="text-white mb-8">
+            <p className="mb-2">Email: <a href="mailto:info@dugaplus.com" className="underline hover:text-estate-light transition-colors">info@dugaplus.com</a></p>
+            <p>Phone: <a href="tel:+385996386738" className="underline hover:text-estate-light transition-colors">+385 99 638 6738</a></p>
+          </div>
           <Link href="/contact" className="btn btn-primary bg-white text-primary hover:bg-estate-light">
             {t.contact.cta}
           </Link>

@@ -10,15 +10,15 @@ export const translations = {
     villas: {
       title: "Our Exclusive Villas",
       villa1: {
-        title: "Modern Sea View Villa",
+        title: "Villa Istriana",
         description: "A stunning new build villa with panoramic sea views, private pool, and modern amenities. Features spacious living areas with fireplace and seamless indoor-outdoor living.",
         details: "Property Details",
         features: "Features",
         viewDetails: "View Details"
       },
       villa2: {
-        title: "Villa Mediterranea",
-        description: "A luxurious new build featuring a private pool, spacious living areas, and stunning sea views. Built in 2025 with modern design and premium finishes.",
+        title: "Modern Sea View Villa",
+        description: "A stunning new build villa with panoramic sea views, private pool, and modern amenities. Features spacious living areas with fireplace and seamless indoor-outdoor living.",
         details: "Property Details",
         features: "Features",
         viewDetails: "View Details"
@@ -42,7 +42,9 @@ export const translations = {
     contact: {
       title: "Interested in Our Villas?",
       description: "Contact us to schedule a private viewing or video call tour. Property exchange options available.",
-      cta: "Get in Touch"
+      cta: "Get in Touch",
+      email: "info@dugaplus.com",
+      phone: "+385 99 638 6738"
     }
   },
   de: {
@@ -54,7 +56,7 @@ export const translations = {
     villas: {
       title: "Unsere exklusiven Villen",
       villa1: {
-        title: "Moderne Villa mit Meerblick",
+        title: "Villa Istriana",
         description: "Eine atemberaubende Neubauvilla mit Panorama-Meerblick, privatem Pool und modernen Annehmlichkeiten. Verfügt über großzügige Wohnbereiche mit Kamin und nahtlosem Übergang zwischen Innen- und Außenbereich.",
         details: "Objektdetails",
         features: "Ausstattung",
@@ -86,7 +88,9 @@ export const translations = {
     contact: {
       title: "Interesse an unseren Villen?",
       description: "Kontaktieren Sie uns für eine private Besichtigung oder Videobesichtigung. Tauschangebote möglich.",
-      cta: "Kontakt aufnehmen"
+      cta: "Kontakt aufnehmen",
+      email: "info@dugaplus.com",
+      phone: "+385 99 638 6738"
     }
   }
 }; 
