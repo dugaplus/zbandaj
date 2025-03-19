@@ -84,7 +84,7 @@ export default function VillaMediterraneaPage() {
             <div className="order-1 lg:order-2">
               <div className="relative h-96 lg:h-[600px] rounded-lg overflow-hidden shadow-xl mb-4">
                 <Image
-                  src="/media/zbandaj05.jpg"
+                  src="/media/zbandaj08.jpg"
                   alt="Villa Mediterranea"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -104,7 +104,7 @@ export default function VillaMediterraneaPage() {
                 </div>
                 <div className="relative h-24 rounded-lg overflow-hidden shadow-md">
                   <Image
-                    src="/media/zbandaj08.jpg"
+                    src="/media/PHOTO-2024-11-07-14-56-47.jpg"
                     alt="Villa Exterior"
                     fill
                     sizes="(max-width: 1024px) 33vw, 16vw"
@@ -120,6 +120,67 @@ export default function VillaMediterraneaPage() {
                     className="object-cover"
                   />
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="container mb-20">
+        <h2 className="heading-2 heading-light mb-10">{language === 'en' ? 'Photo Gallery' : 'Fotogalerie'}</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {[
+            "/media/zbandaj08.jpg",
+            "/media/zbandaj06.jpg",
+            "/media/PHOTO-2024-11-07-14-56-47.jpg",
+            "/media/zbandaj07.jpg",
+            "/media/PHOTO-2024-11-07-14-56-48 2.jpg",
+            "/media/PHOTO-2024-11-07-14-56-48 5.jpg",
+            "/media/PHOTO-2024-11-07-14-56-38 2.jpg",
+            "/media/PHOTO-2024-11-07-14-56-35.jpg",
+          ].map((src, index) => (
+            <div key={index} className="relative aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+              <Image 
+                src={src} 
+                alt={`Villa Mediterranea Image ${index + 1}`} 
+                fill 
+                sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                className="object-cover hover:scale-105 transition-transform duration-300" 
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Additional Information Section */}
+      <section className="container mb-20">
+        <div className="bg-secondary rounded-lg shadow-xl overflow-hidden">
+          <div className="p-8">
+            <h2 className="heading-2 heading-light mb-6">{language === 'en' ? 'Location Highlights' : 'Lage-Highlights'}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+              <div>
+                <h3 className="text-xl font-bold text-primary mb-4">{language === 'en' ? 'Distances' : 'Entfernungen'}</h3>
+                <ul className="space-y-2 text-neutral-700">
+                  <li className="flex items-center"><span className="text-primary mr-2">•</span> {language === 'en' ? 'Beach: 3 km' : 'Strand: 3 km'}</li>
+                  <li className="flex items-center"><span className="text-primary mr-2">•</span> {language === 'en' ? 'Poreč center: 6 km' : 'Zentrum von Poreč: 6 km'}</li>
+                  <li className="flex items-center"><span className="text-primary mr-2">•</span> {language === 'en' ? 'Restaurants: 2 km' : 'Restaurants: 2 km'}</li>
+                  <li className="flex items-center"><span className="text-primary mr-2">•</span> {language === 'en' ? 'Shopping: 3 km' : 'Einkaufsmöglichkeiten: 3 km'}</li>
+                  <li className="flex items-center"><span className="text-primary mr-2">•</span> {language === 'en' ? 'Airport: 60 km (Pula)' : 'Flughafen: 60 km (Pula)'}</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-primary mb-4">{language === 'en' ? 'Area Information' : 'Informationen zur Umgebung'}</h3>
+                <p className="text-neutral-700 mb-4">
+                  {language === 'en' 
+                    ? 'Žbandaj is a tranquil residential area located just a short drive from the historic city of Poreč. The location offers a perfect blend of countryside tranquility and coastal proximity.'
+                    : 'Žbandaj ist ein ruhiges Wohngebiet, das nur eine kurze Fahrt von der historischen Stadt Poreč entfernt liegt. Die Lage bietet eine perfekte Mischung aus ländlicher Ruhe und Küstennähe.'}
+                </p>
+                <p className="text-neutral-700">
+                  {language === 'en'
+                    ? 'The Istrian peninsula is known for its excellent cuisine, wineries, olive oil producers, and beautiful beaches.'
+                    : 'Die istrische Halbinsel ist bekannt für ihre ausgezeichnete Küche, Weingüter, Olivenölproduzenten und schönen Strände.'}
+                </p>
               </div>
             </div>
           </div>

@@ -17,7 +17,7 @@ export const translations = {
         viewDetails: "View Details"
       },
       villa2: {
-        title: "Modern Sea View Villa",
+        title: "Villa Mediterranea",
         description: "A stunning new build villa with panoramic sea views, private pool, and modern amenities. Features spacious living areas with fireplace and seamless indoor-outdoor living.",
         details: "Property Details",
         features: "Features",

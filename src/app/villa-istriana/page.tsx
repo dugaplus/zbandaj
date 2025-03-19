@@ -125,6 +125,33 @@ export default function VillaIstrianaPage() {
         </div>
       </section>
 
+      {/* Gallery Section */}
+      <section className="container mb-20">
+        <h2 className="heading-2 heading-light mb-10">{language === 'en' ? 'Photo Gallery' : 'Fotogalerie'}</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {[
+            "/media/zbandaj02.jpg",
+            "/media/zbandaj07.jpg",
+            "/media/zbandaj04.jpg",
+            "/media/zbandaj01.jpg",
+            "/media/PHOTO-2024-11-07-14-56-48.jpg",
+            "/media/PHOTO-2024-11-07-14-56-44 2.jpg",
+            "/media/PHOTO-2024-11-07-14-56-37 5.jpg",
+            "/media/PHOTO-2024-11-07-14-56-40.jpg",
+          ].map((src, index) => (
+            <div key={index} className="relative aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+              <Image 
+                src={src} 
+                alt={`Villa Istriana Image ${index + 1}`} 
+                fill 
+                sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                className="object-cover hover:scale-105 transition-transform duration-300" 
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section className="bg-primary text-white py-12 mb-12">
         <div className="container">
@@ -161,6 +188,40 @@ export default function VillaIstrianaPage() {
             >
               {t.contact.cta}
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Information Section */}
+      <section className="container mb-20">
+        <div className="bg-secondary rounded-lg shadow-xl overflow-hidden">
+          <div className="p-8">
+            <h2 className="heading-2 heading-light mb-6">{language === 'en' ? 'Location Highlights' : 'Lage-Highlights'}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+              <div>
+                <h3 className="text-xl font-bold text-primary mb-4">{language === 'en' ? 'Distances' : 'Entfernungen'}</h3>
+                <ul className="space-y-2 text-neutral-700">
+                  <li className="flex items-center"><span className="text-primary mr-2">•</span> {language === 'en' ? 'Beach: 3 km' : 'Strand: 3 km'}</li>
+                  <li className="flex items-center"><span className="text-primary mr-2">•</span> {language === 'en' ? 'Poreč center: 6 km' : 'Zentrum von Poreč: 6 km'}</li>
+                  <li className="flex items-center"><span className="text-primary mr-2">•</span> {language === 'en' ? 'Restaurants: 2 km' : 'Restaurants: 2 km'}</li>
+                  <li className="flex items-center"><span className="text-primary mr-2">•</span> {language === 'en' ? 'Shopping: 3 km' : 'Einkaufsmöglichkeiten: 3 km'}</li>
+                  <li className="flex items-center"><span className="text-primary mr-2">•</span> {language === 'en' ? 'Airport: 60 km (Pula)' : 'Flughafen: 60 km (Pula)'}</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-primary mb-4">{language === 'en' ? 'Area Information' : 'Informationen zur Umgebung'}</h3>
+                <p className="text-neutral-700 mb-4">
+                  {language === 'en' 
+                    ? 'Žbandaj is a charming residential area that combines rural tranquility with easy access to the Istrian coast. The location is perfect for those seeking privacy without sacrificing convenience.'
+                    : 'Žbandaj ist ein charmantes Wohngebiet, das ländliche Ruhe mit einfachem Zugang zur istrischen Küste verbindet. Die Lage ist perfekt für diejenigen, die Privatsphäre suchen, ohne auf Komfort zu verzichten.'}
+                </p>
+                <p className="text-neutral-700">
+                  {language === 'en'
+                    ? 'The surrounding area offers numerous attractions including historic sites, beautiful beaches, and world-class culinary experiences that Istria is famous for.'
+                    : 'Die Umgebung bietet zahlreiche Attraktionen, darunter historische Stätten, schöne Strände und erstklassige kulinarische Erlebnisse, für die Istrien berühmt ist.'}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -143,7 +143,7 @@ export default function Home() {
             >
               <div className="relative h-64">
                 <Image
-                  src="/media/zbandaj05.jpg"
+                  src="/media/zbandaj08.jpg"
                   alt="Villa Mediterranea Main View"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -151,7 +151,7 @@ export default function Home() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="heading-3 heading-light mb-4">{t.villas.villa2.title}</h3>
+                <h3 className="heading-3 heading-light mb-4">{language === 'en' ? 'Villa Mediterranea' : 'Villa Mediterranea'}</h3>
                 <p className="text-neutral-600 mb-4">{t.villas.villa2.description}</p>
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="flex flex-col space-y-2">
@@ -208,14 +208,20 @@ export default function Home() {
           <div className="gallery-grid">
             {[
               "/media/zbandaj08.jpg",
+              "/media/zbandaj01.jpg",
+              "/media/zbandaj06.jpg",
               "/media/PHOTO-2024-11-07-14-56-48.jpg",
               "/media/PHOTO-2024-11-07-14-56-44 2.jpg",
               "/media/PHOTO-2024-11-07-14-56-48 2.jpg",
               "/media/PHOTO-2024-11-07-14-56-48 6.jpg",
               "/media/PHOTO-2024-11-07-14-56-38 3.jpg",
-              "/media/zbandaj01.jpg",
+              "/media/PHOTO-2024-11-07-14-56-40 2.jpg",
+              "/media/PHOTO-2024-11-07-14-56-47.jpg",
+              "/media/PHOTO-2024-11-07-14-56-37 5.jpg",
+              "/media/PHOTO-2024-11-07-14-56-35 2.jpg",
+              "/media/zbandaj02.jpg",
               "/media/zbandaj04.jpg",
-              "/media/zbandaj06.jpg"
+              "/media/zbandaj07.jpg"
             ].map((src, index) => (
               <motion.div
                 key={index}
