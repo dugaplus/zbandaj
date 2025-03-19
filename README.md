@@ -1,6 +1,12 @@
-# Zbandaj Villas Website
+# Zbandaj Villa Website
 
-A modern, responsive website showcasing luxury villas in Croatia. Built with Next.js, TypeScript, and Tailwind CSS.
+A modern Next.js website showcasing luxury villas in Croatia.
+
+## Deployment
+
+This site is automatically deployed to Netlify:
+- Production: https://zbandaj.netlify.app
+- Repository: https://github.com/dugaplus/zbandaj
 
 ## Features
 
@@ -42,10 +48,17 @@ A modern, responsive website showcasing luxury villas in Croatia. Built with Nex
 
 ## Development
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
+To run the development server:
+
+```bash
+npm run dev
+```
+
+To build for production:
+
+```bash
+npm run build
+```
 
 ## Adding Images
 
