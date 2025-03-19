@@ -99,11 +99,16 @@
   }
 
   .gallery-item {
-    @apply relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300;
+    @apply relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 aspect-square;
   }
 
   .gallery-image {
     @apply object-cover w-full h-full transition-all duration-500 hover:scale-110;
+  }
+  
+  /* Contact styles */
+  .contact-text {
+    @apply text-neutral-800;
   }
   
   /* New design elements */

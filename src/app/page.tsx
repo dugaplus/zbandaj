@@ -420,13 +420,15 @@ export default function Home() {
                     {language === 'en' ? 'View Larger' : 'Größer ansehen'}
                   </span>
                 </div>
-                <Image 
-                  src={src} 
-                  alt={`Žbandaj Villa Gallery Image ${index + 1}`} 
-                  fill 
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="gallery-image"
-                />
+                <div className="w-full h-full relative">
+                  <Image 
+                    src={src} 
+                    alt={`Žbandaj Villa Gallery Image ${index + 1}`} 
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="gallery-image"
+                  />
+                </div>
               </motion.div>
             ))}
           </div>
@@ -448,17 +450,17 @@ export default function Home() {
 
       {/* Contact CTA */}
       <section className="section animated-bg">
-        <div className="absolute inset-0 bg-black/30 backdrop-blur-xs"></div>
+        <div className="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
         <div className="container text-center relative z-10">
           <motion.div
-            className="max-w-3xl mx-auto py-8 px-6 md:p-12 glass-effect border border-white/20"
+            className="max-w-3xl mx-auto py-8 px-6 md:p-12 glass-effect border border-primary/20"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
             <motion.span
-              className="inline-block px-4 py-1 rounded-full bg-white/10 text-sm uppercase tracking-wider text-white mb-6 shadow-glow-light"
+              className="inline-block px-4 py-1 rounded-full bg-primary/10 text-sm uppercase tracking-wider text-primary mb-6 shadow-glow"
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
@@ -467,7 +469,7 @@ export default function Home() {
               {language === 'en' ? 'Get In Touch' : 'Kontaktieren Sie Uns'}
             </motion.span>
             <motion.h2 
-              className="heading-2 heading-dark mb-6 drop-shadow-lg"
+              className="heading-2 heading-light mb-6 text-gradient"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -476,7 +478,7 @@ export default function Home() {
               {t.contact.title}
             </motion.h2>
             <motion.p 
-              className="text-white text-xl mb-8 max-w-2xl mx-auto drop-shadow-md"
+              className="text-neutral-700 text-xl mb-8 max-w-2xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -485,23 +487,23 @@ export default function Home() {
               {t.contact.description}
             </motion.p>
             <motion.div 
-              className="text-white mb-8 space-y-3"
+              className="text-neutral-700 mb-8 space-y-3"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
               <p className="flex items-center justify-center mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <a href="mailto:info@dugaplus.com" className="underline hover:text-estate-light transition-colors">info@dugaplus.com</a>
+                <a href="mailto:info@dugaplus.com" className="text-primary hover:text-estate-dark transition-colors">info@dugaplus.com</a>
               </p>
               <p className="flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <a href="tel:+385996386738" className="underline hover:text-estate-light transition-colors">+385 99 638 6738</a>
+                <a href="tel:+385996386738" className="text-primary hover:text-estate-dark transition-colors">+385 99 638 6738</a>
               </p>
             </motion.div>
             <motion.div
