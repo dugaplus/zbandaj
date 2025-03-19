@@ -7,11 +7,9 @@
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
   }
-}
 
-@layer base {
   body {
-    @apply bg-white text-primary;
+    @apply bg-secondary text-neutral-800;
   }
 }
 
@@ -21,31 +19,47 @@
   }
   
   .btn {
-    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm transition-colors duration-200;
+    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm transition-all duration-200;
   }
   
   .btn-primary {
-    @apply bg-accent text-white hover:bg-accent/90;
+    @apply bg-primary text-white hover:bg-estate-dark hover:shadow-lg transform hover:-translate-y-0.5;
   }
   
   .btn-secondary {
-    @apply bg-white text-primary border-primary hover:bg-primary hover:text-white;
+    @apply bg-white text-primary border-primary hover:bg-estate-light hover:border-estate-dark hover:text-estate-dark hover:shadow-md transform hover:-translate-y-0.5;
   }
   
   .section {
     @apply py-16 sm:py-24;
   }
+
+  .section-light {
+    @apply bg-secondary;
+  }
+
+  .section-dark {
+    @apply bg-primary text-white;
+  }
   
   .heading-1 {
-    @apply text-4xl sm:text-5xl font-bold tracking-tight;
+    @apply text-4xl sm:text-5xl font-bold tracking-tight text-primary;
   }
   
   .heading-2 {
-    @apply text-3xl sm:text-4xl font-bold tracking-tight;
+    @apply text-3xl sm:text-4xl font-bold tracking-tight text-primary;
   }
   
   .heading-3 {
-    @apply text-2xl sm:text-3xl font-bold tracking-tight;
+    @apply text-2xl sm:text-3xl font-bold tracking-tight text-primary;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300;
+  }
+
+  .nav-link {
+    @apply text-neutral-600 hover:text-primary transition-colors duration-200;
   }
 }
 
@@ -56,9 +70,10 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* Remove dark mode for consistency */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
   }
 }

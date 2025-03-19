@@ -21,21 +21,21 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-white shadow-md" : "bg-transparent"
+        scrolled ? "bg-white/95 backdrop-blur-sm shadow-md" : "bg-transparent"
       }`}
     >
       <div className="container">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="text-2xl font-bold text-primary">
+          <Link href="/" className="text-2xl font-bold text-estate-dark hover:text-primary transition-colors">
             Žbandaj Villas
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-600 hover:text-accent transition-colors">
+            <Link href="/" className="nav-link">
               Home
             </Link>
-            <Link href="/#villas" className="text-gray-600 hover:text-accent transition-colors">
+            <Link href="/#villas" className="nav-link">
               Villas
             </Link>
             <Link href="/contact" className="btn btn-primary">
@@ -45,7 +45,7 @@ export default function Navigation() {
 
           {/* Mobile Navigation Button */}
           <button
-            className="md:hidden text-gray-600 hover:text-accent"
+            className="md:hidden text-estate-dark hover:text-primary transition-colors"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? (
@@ -62,19 +62,19 @@ export default function Navigation() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden bg-white shadow-lg rounded-lg mt-4 p-4"
+            className="md:hidden bg-white/95 backdrop-blur-sm shadow-lg rounded-lg mt-4 p-4"
           >
             <div className="flex flex-col space-y-4">
               <Link
                 href="/"
-                className="text-gray-600 hover:text-accent transition-colors"
+                className="nav-link"
                 onClick={() => setIsOpen(false)}
               >
                 Home
               </Link>
               <Link
                 href="/#villas"
-                className="text-gray-600 hover:text-accent transition-colors"
+                className="nav-link"
                 onClick={() => setIsOpen(false)}
               >
                 Villas
